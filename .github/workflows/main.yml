@@ -2,7 +2,7 @@ name: Experiment
 on: 
   push:
     branches:
-      - main #here we choose to deploy only when a push is detected on the main branch
+      - master #here we choose to deploy only when a push is detected on the main branch
 jobs:
   build:
     runs-on: ubuntu-latest
