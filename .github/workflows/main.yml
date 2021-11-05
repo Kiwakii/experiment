@@ -5,7 +5,7 @@ on:
       - master #here we choose to deploy only when a push is detected on the main branch
       
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
