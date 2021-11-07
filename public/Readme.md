@@ -24,3 +24,6 @@
 
 # Also leverage is Nodejs scripts available in AWS that randomizes which static files gets invoked when request 
  # gets triggered
+
+#  index.html -- https://subject-us-east-1.s3.amazonaws.com/index.html
+#  index_a.html -- https://experiment-us-east-1.s3.amazonaws.com/index_a.html
