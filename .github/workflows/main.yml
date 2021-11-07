@@ -3,8 +3,9 @@ on:
   push:
     branches:
       - master #here we choose to deploy only when a push is detected on the main branch
+      
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -19,6 +20,6 @@ jobs:
     # - name: Build static site
     #  run: yarn install && npm run-script build
     
-    # - name: Deploy static site to S3 bucket
-      # run: aws s3 sync ./thefoldertodeploy/ s3://yourbucket.com --delete
+    - name: Deploy static site to S3 bucket
+      run: aws s3 sync ./public/ s3://experimentation.com --delete
       # --delete flag will remove any file in the s3 that are not on the "thefoldertodeploy" folder
